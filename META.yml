@@ -1,6 +1,6 @@
 ---
 name: WWW-PastebinCa-Retrieve
-version: 0.001
+version: 0.002
 author:
   - 'Zoffix Znet <zoffix@cpan.org>'
 abstract: retrieve pastes from http://pastebin.ca
@@ -19,7 +19,7 @@ build_requires:
 provides:
   WWW::PastebinCa::Retrieve:
     file: lib/WWW/PastebinCa/Retrieve.pm
-    version: 0.001
+    version: 0.002
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

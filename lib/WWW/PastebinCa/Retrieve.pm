@@ -3,7 +3,7 @@ package WWW::PastebinCa::Retrieve;
 use warnings;
 use strict;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 use Carp;
 use URI;
 use LWP::UserAgent;
@@ -176,24 +176,28 @@ WWW::PastebinCa::Retrieve - retrieve pastes from http://pastebin.ca
     printf "Posted on %s (%s ago), titled %s\n\n%s\n",
             @$content_ref{ qw(post_date  age  name  content ) };
 
+=head1 DESCRIPTION
+
+Retrieve pastes on from L<http://pastebin.ca> via Perl
+
 =head1 CONSTRUCTOR
 
 =head2 new
 
-    my $paster = WWW::PastebinCa::Create->new;
+    my $paster = WWW::PastebinCa::Retrieve->new;
 
-    my $paster = WWW::PastebinCa::Create->new(
+    my $paster = WWW::PastebinCa::Retrieve->new(
         timeout => 10,
     );
 
-    my $paster = WWW::PastebinCa::Create->new(
+    my $paster = WWW::PastebinCa::Retrieve->new(
         ua => LWP::UserAgent->new(
             timeout => 10,
             agent   => 'PasterUA',
         ),
     );
 
-Constructs and returns a brand new yummy juicy WWW::PastebinCa::Create
+Constructs and returns a brand new yummy juicy WWW::PastebinCa::Retrieve
 object. Takes two arguments, both are I<optional>. Possible arguments are
 as follows:
 
@@ -214,7 +218,7 @@ to specify the C<ua> argument which takes an L<LWP::UserAgent> object
 as a value. B<Note:> the C<timeout> argument to the constructor will
 not do anything if you specify the C<ua> argument as well. B<Defaults to:>
 plain boring default L<LWP::UserAgent> object with C<timeout> argument
-set to whatever C<WWW::PastebinCa::Create>'s C<timeout> argument is
+set to whatever C<WWW::PastebinCa::Retrieve>'s C<timeout> argument is
 set to as well as C<agent> argument is set to mimic Firefox.
 
 =head1 METHODS
